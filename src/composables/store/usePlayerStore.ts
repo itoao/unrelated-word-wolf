@@ -4,29 +4,31 @@ type PlayerInfo = {
   theme: string // そのプレイヤー与えられたお題
 }
 
+const initialValue = [
+  {
+    id: '',
+    name: '',
+    theme: ''
+  },
+  {
+    id: '',
+    name: '',
+    theme: ''
+  },
+  {
+    id: '',
+    name: '',
+    theme: ''
+  }
+]
+
 /**
  * グローバルなストアキー
  */
 const playerStoreKey = Symbol.for('playerStoreKey') as SymbolWithDescription
 
 export const usePlayerStore = defineStore(playerStoreKey.description, () => {
-  const players = ref<PlayerInfo[]>([
-    {
-      id: '',
-      name: 'ひしゃく',
-      theme: ''
-    },
-    {
-      id: '',
-      name: 'からすき',
-      theme: ''
-    },
-    {
-      id: '',
-      name: 'かかし',
-      theme: ''
-    }
-  ])
+  const players = ref<PlayerInfo[]>(initialValue)
 
   return {
     addPlayer,
