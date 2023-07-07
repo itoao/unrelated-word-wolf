@@ -25,5 +25,12 @@ export default defineNuxtConfig({
     public: {
       API_KEY: process.env.API_KEY
     }
+  ],
+  // ネストしたcomposableも自動でインポートするようにする
+  // https://nuxt.com/docs/guide/directory-structure/composables#how-files-are-scanned
+  imports: {
+    dirs: [
+      'composables/**'
+    ]
   }
 })
