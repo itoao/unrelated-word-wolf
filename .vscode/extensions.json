@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "atlassian.atlascode",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "firefox-devtools.vscode-firefox-debug",
+    "mikestead.dotenv",
+    "Vue.volar",
+    "shardulm94.trailing-spaces",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "syler.sass-indented"
+  ]
+}
