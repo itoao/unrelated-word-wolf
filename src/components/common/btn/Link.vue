@@ -7,6 +7,10 @@ defineProps<{
   text: string,
   to: AppRoute
 }>()
+
+const emits = defineEmits<{(e: 'click'): void}>()
+
+const onClick = () => emits('click')
 </script>
 
 <template>
@@ -15,6 +19,7 @@ defineProps<{
       color="primary"
       :disabled="disabled"
       :loading="loading"
+      @click="onClick"
     >
       {{ text }}
     </v-btn>
