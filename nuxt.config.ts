@@ -25,6 +25,17 @@ export default defineNuxtConfig({
     public: {
       API_KEY: process.env.API_KEY
     }
+  },
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: [
+          // automatically imports `defineStore`
+          'defineStore' // import { defineStore } from 'pinia'
+        ]
+      }
+    ]
   ],
   // ネストしたcomposableも自動でインポートするようにする
   // https://nuxt.com/docs/guide/directory-structure/composables#how-files-are-scanned
