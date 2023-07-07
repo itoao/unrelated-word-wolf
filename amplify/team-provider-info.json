@@ -1,15 +1,23 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-unrelatedwordwolf-dev-13606-authRole",
-      "UnauthRoleArn": "arn:aws:iam::604126380041:role/amplify-unrelatedwordwolf-dev-13606-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::604126380041:role/amplify-unrelatedwordwolf-dev-13606-authRole",
+      "AuthRoleName": "amplify-unrelatedwordwolf-dev-43010-authRole",
+      "UnauthRoleArn": "arn:aws:iam::604126380041:role/amplify-unrelatedwordwolf-dev-43010-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::604126380041:role/amplify-unrelatedwordwolf-dev-43010-authRole",
       "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-unrelatedwordwolf-dev-13606-deployment",
-      "UnauthRoleName": "amplify-unrelatedwordwolf-dev-13606-unauthRole",
-      "StackName": "amplify-unrelatedwordwolf-dev-13606",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:604126380041:stack/amplify-unrelatedwordwolf-dev-13606/607cb1d0-1ce4-11ee-91bb-0e01cb4d1bbd",
-      "AmplifyAppId": "d3ovguc0otdeuj"
+      "DeploymentBucketName": "amplify-unrelatedwordwolf-dev-43010-deployment",
+      "UnauthRoleName": "amplify-unrelatedwordwolf-dev-43010-unauthRole",
+      "StackName": "amplify-unrelatedwordwolf-dev-43010",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:604126380041:stack/amplify-unrelatedwordwolf-dev-43010/b1090a00-1cfc-11ee-907a-0a9d0780bd3d",
+      "AmplifyAppId": "d95fddq6lqsda"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d95fddq6lqsda",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
