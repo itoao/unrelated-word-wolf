@@ -1,7 +1,16 @@
 <script setup lang="ts">
 withHeader('ゲーム設定')
+
+const {
+  getPlayer
+} = usePlayerStore()
 </script>
 
 <template>
-  <h1>ワードウルフ</h1>
+  <v-row class="mt-6">
+    <v-col class="text-center">
+      全員で{{ getPlayer().length }}人
+    </v-col>
+  </v-row>
+  <h1>トーク時間（分）</h1>
 </template>
