@@ -1,7 +1,28 @@
 <script setup lang="ts">
 withHeader('プレイヤー設定')
+
+const {
+  getPlayer
+} = usePlayerStore()
 </script>
 
 <template>
-  <h1>ワードウルフ</h1>
+  <v-row class="mt-6">
+    <v-col class="text-center">
+      人数 と なまえ を決める
+    </v-col>
+  </v-row>
+  <player-counter class="mt-8" />
+
+  <player-list />
+
+  <v-row class="mt-8">
+    <v-col class="text-center">
+      <common-btn-link
+        :disabled="getPlayer().some(player => player.name === '')"
+        text="つぎへ"
+        to="/setGame"
+      />
+    </v-col>
+  </v-row>
 </template>
