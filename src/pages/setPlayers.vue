@@ -2,7 +2,8 @@
 withHeader('プレイヤー設定')
 
 const {
-  getPlayer
+  getPlayer,
+  removePlayerAll
 } = usePlayerStore()
 </script>
 
@@ -17,6 +18,12 @@ const {
   <player-list />
 
   <v-row class="mt-8">
+    <v-col class="text-center">
+      <common-btn-error
+        text="リセット"
+        @click="removePlayerAll"
+      />
+    </v-col>
     <v-col class="text-center">
       <common-btn-link
         :disabled="getPlayer().some(player => player.name === '')"

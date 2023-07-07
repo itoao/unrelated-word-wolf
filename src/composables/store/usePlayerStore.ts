@@ -32,7 +32,8 @@ export const usePlayerStore = defineStore(playerStoreKey.description, () => {
     addPlayer,
     getPlayer,
     popPlayer,
-    removePlayer
+    removePlayer,
+    removePlayerAll
   }
 
   //getters
@@ -57,5 +58,9 @@ export const usePlayerStore = defineStore(playerStoreKey.description, () => {
    */
   function removePlayer (start: number) {
     players.value.splice(start, 1)
+  }
+
+  function removePlayerAll () {
+    players.value = initialValue
   }
 })
