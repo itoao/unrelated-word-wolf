@@ -18,9 +18,11 @@
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
+    "@pinia/nuxt": "^0.4.11",
     "cspell": "^6.31.1",
     "eslint": "^8.44.0",
     "eslint-plugin-nuxt": "^4.0.0",
-    "mdi": "^2.2.43"
+    "mdi": "^2.2.43",
+    "pinia": "^2.1.4"
   }
 }
