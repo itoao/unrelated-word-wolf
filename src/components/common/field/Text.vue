@@ -3,7 +3,7 @@ type Props = {
   clearable?: boolean
   disabled?: boolean
   hint?: string
-  label: string
+  label?: string
   modelValue: string
   placeholder?: string
   rules?: [(val: string) => true | string]
