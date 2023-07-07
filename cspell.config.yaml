@@ -1,0 +1,17 @@
+ignorePaths:
+  - .env
+  - .git
+  - .github
+  - .nuxt
+  - .output
+  - amplify/**/*.json
+  - cspell.config.yaml
+  - dist
+  - node_modules
+  - src/aws-exports.js
+  - src/public
+words:
+  - nuxi
+  - nuxt
+  - nuxtjs
+  - stylelint
