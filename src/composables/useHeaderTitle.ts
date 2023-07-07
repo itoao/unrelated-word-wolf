@@ -1,6 +1,6 @@
 const headerKey: InjectionKey<string> = Symbol()
 
-const title = ref('ワードウルフ')
+const title = ref('ワードとウルフ')
 
 export function withHeader (newTitle: string) {
   title.value = newTitle
@@ -8,7 +8,7 @@ export function withHeader (newTitle: string) {
   provide(headerKey, newTitle)
 }
 
-export function useHeader () {
+export function useHeaderTitle () {
   inject(headerKey)
 
   return {
