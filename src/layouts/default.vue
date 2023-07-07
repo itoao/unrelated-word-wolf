@@ -1,14 +1,16 @@
 <script setup lang="ts">
 const {
   title
-} = useHeader()
+} = useHeaderTitle()
 </script>
 
 <template>
   <v-app>
     <v-app-bar>
       <v-app-bar-title>
-        {{ title }}
+        <div class="font-weight-bold">
+          {{ title }}
+        </div>
       </v-app-bar-title>
     </v-app-bar>
 
