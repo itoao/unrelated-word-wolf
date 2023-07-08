@@ -12,5 +12,4 @@ const {
       全員で{{ getPlayer().length }}人
     </v-col>
   </v-row>
-  <h1>トーク時間（分）</h1>
 </template>
