@@ -20,7 +20,7 @@ const initialValue = [
     name: '',
     theme: ''
   }
-]
+] as const
 
 /**
  * グローバルなストアキー
@@ -28,7 +28,10 @@ const initialValue = [
 const playerStoreKey = Symbol.for('playerStoreKey') as SymbolWithDescription
 
 export const usePlayerStore = defineStore(playerStoreKey.description, () => {
-  const players = ref<PlayerInfo[]>(initialValue)
+  // 初期化時に利用するので初期値のコピーを取っておく
+  const initialClone = structuredClone(initialValue)
+
+  const players = ref<PlayerInfo[]>([...initialClone])
 
   return {
     addPlayer,
@@ -62,7 +65,10 @@ export const usePlayerStore = defineStore(playerStoreKey.description, () => {
     players.value.splice(start, 1)
   }
 
+  /**
+   * すべてのプレイヤー情報を初期化する
+   */
   function removePlayerAll () {
-    players.value = initialValue
+    players.value = [...initialValue]
   }
 })
