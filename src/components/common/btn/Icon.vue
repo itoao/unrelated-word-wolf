@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type Props = {
-  disabled: boolean
+  disabled?: boolean
   icon: `mdi-${string}`
   iconColor?: string
   iconSize?: string | number
