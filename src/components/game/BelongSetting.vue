@@ -13,30 +13,30 @@ const {
   incrementWolf
 } = useGameStore()
 
-// // 市民数の初期値
-// const civilCount = computed(() => getGame().civilCount)
+// 市民数の初期値
+const civilCount = computed(() => getGame().civilCount)
 
-// // 市民数の初期値
-// const wolfCount = computed(() => getGame().wolfCount)
+// 市民数の初期値
+const wolfCount = computed(() => getGame().wolfCount)
 
 const civilCountDisabled = computed(() => {
   // 人狼の数が1だったら、非活性（true）
-  if (getGame().wolfCount === 1) {
+  if (wolfCount.value === 1) {
     return true
   }
 
   // 市民の数より、人狼の数のほうが多かったら非活性（true）
-  if (getGame().wolfCount > getGame().civilCount) {
+  if (wolfCount.value > civilCount.value) {
     return true
   }
 
   // 市民と人狼の数が同じだったら非活性（true）
-  if (getGame().wolfCount === getGame().civilCount) {
+  if (wolfCount.value === civilCount.value) {
     return false
   }
 
   // 人狼より、市民のほうが2以上多かったら活性（false）
-  if (getGame().civilCount - getGame().wolfCount >= 2) {
+  if (civilCount.value - wolfCount.value >= 2) {
     return false
   }
 
@@ -45,22 +45,22 @@ const civilCountDisabled = computed(() => {
 })
 
 const wolfCountDisabled = computed(() => {
-  if (getGame().civilCount - getGame().wolfCount === 1) {
+  if (civilCount.value - wolfCount.value === 1) {
     return true
   }
 
   // 市民の数より、人狼の数のほうが多かったらtrue（非活性）を返す
-  if (getGame().wolfCount > getGame().civilCount) {
+  if (wolfCount.value > civilCount.value) {
     return true
   }
 
   // 市民と人狼の数が同じだったらfalse（活性）を返す
-  if (getGame().wolfCount === getGame().civilCount) {
+  if (wolfCount.value === civilCount.value) {
     return false
   }
 
   // 人狼より、市民のほうが2以上多かったらfalse（活性）を返す
-  if (getGame().civilCount - getGame().wolfCount === 2) {
+  if (civilCount.value - wolfCount.value === 2) {
     return true
   }
 
@@ -95,7 +95,7 @@ const onCountUpWolf = () => {
       <common-chip
         size="large"
         color="primary"
-        :text="`${String(getGame().civilCount)}`"
+        :text="`${String(civilCount)}`"
       />
       <common-btn-icon
         icon="mdi-arrow-left-bold"
@@ -115,7 +115,7 @@ const onCountUpWolf = () => {
       <common-chip
         size="large"
         color="secondary"
-        :text="`${String(getGame().wolfCount)}`"
+        :text="`${String(wolfCount)}`"
       />
       ウルフ
     </v-col>
