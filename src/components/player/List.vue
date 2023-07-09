@@ -11,7 +11,7 @@ const playerName = ref('')
 
 <template>
   <v-list>
-    <template  v-for="(item, index) in getPlayer()" :key="item.id">
+    <template v-for="(item, index) in getPlayer()" :key="item.id">
       <v-list-item>
         <v-list-item-action start>
           <common-btn-icon
