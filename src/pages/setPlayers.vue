@@ -24,12 +24,9 @@ const {
         @click="removePlayerAll"
       />
     </v-col>
-    <v-col class="text-center">
-      <common-btn-link
-        :disabled="getPlayer().some(player => player.name === '')"
-        text="つぎへ"
-        to="/setGame"
-      />
-    </v-col>
+    <app-btn-next
+      to="/setGame"
+      :disabled="getPlayer().some(player => player.name === '')"
+    />
   </v-row>
 </template>

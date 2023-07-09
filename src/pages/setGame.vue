@@ -8,11 +8,6 @@ withHeaderTitle('ゲーム設定')
   <game-time-setting />
 
   <v-row class="mt-8">
-    <v-col class="text-center">
-      <common-btn-link
-        text="つぎへ"
-        to="/setQuestion"
-      />
-    </v-col>
+    <app-btn-next to="/setQuestion" />
   </v-row>
 </template>
