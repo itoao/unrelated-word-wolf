@@ -1,1 +1,1 @@
-export type AppRoute = '/' | '/result' | '/setAnswer' | '/setGame' | '/setPlayers' | 'setQuestion' | 'thinkQuestion'
+export type AppRoute = '/' | '/result' | '/setAnswer' | '/setGame' | '/setPlayers' | '/setQuestion' | '/thinkQuestion'
