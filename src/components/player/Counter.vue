@@ -39,12 +39,11 @@ const onCountUp = () => {
       />
     </v-col>
     <v-col class="text-center">
-      <v-chip
+      <common-chip
         size="x-large"
         color="primary"
-      >
-        {{ getPlayer().length }}
-      </v-chip>
+        :text="String(getPlayer().length)"
+      />
     </v-col>
     <v-col class="text-center">
       <common-btn-icon
