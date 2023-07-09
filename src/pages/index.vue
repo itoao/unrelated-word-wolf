@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import LogoImage from 'assets/uww.png'
 
-withHeader('ワードとウルフ')
+withHeaderTitle('ワードとウルフ')
 </script>
 
 <template>

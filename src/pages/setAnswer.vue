@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withHeader('ウルフは誰？')
+withHeaderTitle('ウルフは誰？')
 </script>
 
 <template>

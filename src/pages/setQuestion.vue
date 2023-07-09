@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withHeader('お題')
+withHeaderTitle('お題')
 </script>
 
 <template>

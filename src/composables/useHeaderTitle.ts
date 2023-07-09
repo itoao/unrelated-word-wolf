@@ -2,7 +2,7 @@ const headerKey: InjectionKey<string> = Symbol()
 
 const title = ref('ワードとウルフ')
 
-export function withHeader (newTitle: string) {
+export function withHeaderTitle (newTitle: string) {
   title.value = newTitle
 
   provide(headerKey, newTitle)

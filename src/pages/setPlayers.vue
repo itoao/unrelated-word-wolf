@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withHeader('プレイヤー設定')
+withHeaderTitle('プレイヤー設定')
 
 const {
   getPlayer,
