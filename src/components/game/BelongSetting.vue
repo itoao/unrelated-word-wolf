@@ -13,10 +13,6 @@ const {
   incrementWolf
 } = useGameStore()
 
-console.log('getGame().civilCount', getGame().civilCount)
-
-console.log('games', getGame())
-
 // // 市民数の初期値
 // const civilCount = computed(() => getGame().civilCount)
 
@@ -24,10 +20,8 @@ console.log('games', getGame())
 // const wolfCount = computed(() => getGame().wolfCount)
 
 const civilCountDisabled = computed(() => {
-  console.log('wolfcount', getGame().wolfCount)
   // 人狼の数が1だったら、非活性（true）
   if (getGame().wolfCount === 1) {
-    console.log('人狼の数が1だったら、非活性（true', )
     return true
   }
 

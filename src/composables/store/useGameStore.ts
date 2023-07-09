@@ -33,20 +33,15 @@ const initializeCounts = (playerCount: number) => {
 const gameStoreKey = Symbol.for('gameStoreKey') as SymbolWithDescription
 
 export const useGameStore = defineStore(gameStoreKey.description, () => {
-  console.log('useGameStore called', )
   const {
     getPlayer
   } = usePlayerStore()
-
-  console.log('getplayer', getPlayer())
 
   // ゲームステートの初期値
   const game = ref<GameInfo>({
     civilCount: initializeCounts(getPlayer().length).civilCount,
     wolfCount: initializeCounts(getPlayer().length).wolfCount
   })
-
-  console.log('game', game)
 
   return {
     decrementCivil,
