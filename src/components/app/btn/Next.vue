@@ -2,7 +2,7 @@
 import type { AppRoute } from '~/types/AppRoute'
 
 defineProps<{
-  disabled: boolean
+  disabled?: boolean
   to: AppRoute
 }>()
 
