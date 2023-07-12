@@ -37,10 +37,13 @@ export const useGameStore = defineStore(gameStoreKey.description, () => {
     getPlayer
   } = usePlayerStore()
 
+  // 市民数・人狼数それぞれの初期値が入っているオブジェクト
+  const initialCounts = initializeCounts(getPlayer().length)
+
   // ゲームステートの初期値
   const game = ref<GameInfo>({
-    civilCount: initializeCounts(getPlayer().length).civilCount,
-    wolfCount: initializeCounts(getPlayer().length).wolfCount
+    civilCount: initialCounts.civilCount,
+    wolfCount: initialCounts.wolfCount
   })
 
   return {
