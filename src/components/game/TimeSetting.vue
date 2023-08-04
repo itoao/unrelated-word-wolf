@@ -1,15 +1,11 @@
 <script setup lang="ts">
-const time = ref(3)
+const {
+  time
+} = usePlayingTime()
 
-const onCountDown = () => {
-  time.value--
-  withPlayingTime(time.value)
-}
-
-const onCountUp = () => {
-  time.value++
-  withPlayingTime(time.value)
-}
+const {
+  withPlayingTime
+} = useProvidePlayingTime()
 </script>
 
 <template>
@@ -24,7 +20,7 @@ const onCountUp = () => {
         icon="mdi-arrow-left-bold"
         icon-size="x-large"
         :disabled="time === 1"
-        @click="onCountDown"
+        @click="withPlayingTime(--time)"
       />
     </v-col>
     <v-col class="text-center">
@@ -39,7 +35,7 @@ const onCountUp = () => {
         icon="mdi-arrow-right-bold"
         icon-size="x-large"
         :disabled="time === 60"
-        @click="onCountUp"
+        @click="withPlayingTime(++time)"
       />
     </v-col>
   </v-row>
