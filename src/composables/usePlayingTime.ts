@@ -2,16 +2,22 @@ const playingTimeKey: InjectionKey<number> = Symbol()
 
 const time = ref(3)
 
-export function withPlayingTime (newTime: number) {
-  time.value = newTime
+export function useProvidePlayingTime() {
+  const withPlayingTime = (newTime: number) => {
+    time.value = newTime
+  }
 
-  provide(playingTimeKey, newTime)
+  provide(playingTimeKey, time.value)
+
+  return {
+    withPlayingTime
+  }
 }
 
 export function usePlayingTime () {
-  inject(playingTimeKey)
+  const injectedTime = inject<Ref<number>>(playingTimeKey, time)
 
   return {
-    time
+    time: nonNull(injectedTime)
   }
 }
